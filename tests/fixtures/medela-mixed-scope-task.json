@@ -1,0 +1,58 @@
+{
+  "scopeGroups": [
+    {
+      "id": "coop-90-all",
+      "scene": "cooperation",
+      "contentType": "all",
+      "window": "90d",
+      "traffic": "all",
+      "view": "scale",
+      "fields": [
+        "exposure_median",
+        "read_median",
+        "like_median",
+        "collect_median",
+        "traffic_sources"
+      ]
+    },
+    {
+      "id": "coop-90-natural",
+      "scene": "cooperation",
+      "contentType": "all",
+      "window": "90d",
+      "traffic": "natural",
+      "view": "scale",
+      "fields": [
+        "exposure",
+        "read"
+      ]
+    },
+    {
+      "id": "daily-30-all",
+      "scene": "daily",
+      "contentType": "all",
+      "window": "30d",
+      "traffic": "all",
+      "view": "scale",
+      "fields": [
+        "exposure_median",
+        "read_median",
+        "like_median",
+        "collect_median"
+      ]
+    },
+    {
+      "id": "recent-16",
+      "scene": "all",
+      "contentType": "all",
+      "window": "recent16",
+      "traffic": "original",
+      "view": "list",
+      "fields": [
+        "max_read",
+        "max_like",
+        "max_collect"
+      ]
+    }
+  ]
+}

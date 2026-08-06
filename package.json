@@ -1,0 +1,37 @@
+{
+  "name": "xundao-local-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "web": "node src/web_server.mjs",
+    "web:local": "bash scripts/start-local.sh",
+    "setup:local": "bash scripts/setup-local.sh",
+    "web:with-deepseek-pdf": "python3 scripts/run_with_deepseek_pdf_key.py \"$DEEPSEEK_KEY_PDF\" node src/web_server.mjs",
+    "web:with-qwen-csv": "node scripts/run_with_qwen_csv_key.mjs \"$QWEN_API_KEY_FILE\" npm run web",
+    "start": "node src/web_server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:contracts": "node --test tests/field_contracts.test.mjs tests/task_state_machine.test.mjs tests/task_contract.test.mjs tests/task_acceptance.test.mjs",
+    "test:integration": "node --test tests/collection_plan.test.mjs tests/collection_checkpoint.test.mjs tests/dynamic_fields.test.mjs tests/evidence_enrichment.test.mjs tests/field_execution_gate.test.mjs tests/field_resolution_service.test.mjs tests/medela_core.test.mjs tests/output_policy.test.mjs tests/task_orchestrator.test.mjs tests/auth_service.test.mjs tests/identity_repository.test.mjs tests/retention_service.test.mjs tests/lui_contract.test.mjs tests/intent_router.test.mjs tests/agent_interpretation_service.test.mjs tests/profile_service.test.mjs tests/analytics_service.test.mjs tests/workbook_bridge.test.mjs",
+    "test:release": "npm test && npm run test:integration",
+    "smoke:team": "node scripts/smoke_team_delivery.mjs",
+    "smoke:models": "node scripts/smoke_models.mjs",
+    "smoke:workbook": "node scripts/smoke_portable_workbook.mjs",
+    "fields:build": "node scripts/build_pgy_field_contracts_v1.mjs",
+    "extract": "python3 src/extract_creators.py",
+    "login": "node src/pgy_session.mjs login",
+    "capture": "node src/pgy_session.mjs capture",
+    "auto-capture": "node src/pgy_session.mjs capture --auto",
+    "summarize": "node src/summarize_capture.mjs",
+    "map": "python3 src/map_results.py",
+    "export": "node src/export_workbook.mjs",
+    "pipeline": "python3 src/extract_creators.py && node src/summarize_capture.mjs && python3 src/map_results.py && node src/export_workbook.mjs"
+  },
+  "dependencies": {
+    "pg": "8.16.3",
+    "playwright": "1.61.1"
+  }
+}

@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>寻达工作台</title>
+    <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./delivery.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="任务导航">
+        <div class="sidebar-start">
+          <div class="brand">
+            <img class="brand-mark" src="./logo.svg" alt="" />
+            <div>
+              <h1>寻达</h1>
+            </div>
+            <label class="sidebar-search" for="taskHistorySearch">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 4.5 4.5"/></svg>
+              <input id="taskHistorySearch" type="search" placeholder="搜索任务" autocomplete="off" />
+              <kbd>⌘K</kbd>
+            </label>
+            <button class="sidebar-collapse" id="sidebarCollapse" type="button" aria-label="收起侧栏">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="3"/><path d="M9 4v16"/></svg>
+            </button>
+          </div>
+
+          <button class="new-task-button is-active" id="newTaskButton" type="button" data-screen="workbench" data-new-task aria-label="新建任务">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5h4l10-10a2.1 2.1 0 0 0-4-4l-10 10z"/><path d="M13.5 6.5l4 4M14 19.5h5.5"/></svg>
+            <span>新建任务</span>
+          </button>
+        </div>
+
+        <section class="sidebar-history" id="recentTasks" aria-label="最近 7 天任务记录">
+          <div class="sidebar-section-label"><span>最近 7 天</span><small>自动清理</small></div>
+          <div id="recentTaskItems" class="recent-task-items">
+            <p class="empty-state">正在读取任务记录……</p>
+          </div>
+        </section>
+
+        <nav class="sidebar-bottom" aria-label="账号与管理">
+          <button class="nav-item" data-screen="analytics" aria-label="管理后台">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/><path d="M3 20.5h18"/></svg>
+            <span>管理后台</span>
+          </button>
+          <button class="nav-item" data-screen="settings" aria-label="个人中心">
+            <span class="sidebar-avatar">寻</span>
+            <span>个人中心</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="workspace">
+        <section class="screen is-active" id="workbench">
+          <div class="workspace-connection" aria-live="polite">
+            <span class="account-state" id="connectionBadge"><i></i><span id="connectionText">未连接</span></span>
+          </div>
+          <main class="lui-workbench is-empty" id="luiWorkbench">
+            <div class="lui-stage">
+              <section class="lui-thread">
+                <div class="lui-empty-heading" id="luiEmptyHeading">
+                  <h2>告诉我，找什么</h2>
+                </div>
+                <section class="conversation" id="conversation" aria-live="polite" aria-label="任务执行过程"></section>
+                <button class="conversation-jump-latest" id="conversationJumpLatest" type="button" hidden>查看最新进度</button>
+
+                <form class="lui-composer" id="luiComposer">
+                  <textarea id="luiInput" aria-label="任务描述" rows="3" placeholder="描述任务，或拖入 Excel 文件"></textarea>
+                  <div class="lui-attachment" id="luiAttachment" hidden>
+                    <span class="excel-file-icon">X</span>
+                    <div>
+                      <strong id="luiAttachmentName"></strong>
+                      <small id="luiAttachmentMeta">已添加，发送后开始解析</small>
+                    </div>
+                    <button id="luiRemoveFile" type="button" aria-label="移除 Excel">移除</button>
+                  </div>
+                  <div class="composer-bottom">
+                    <div class="composer-left">
+                      <div class="attachment-menu-wrap">
+                        <button class="composer-plus" id="luiAttachmentTrigger" type="button" aria-label="添加文件" aria-expanded="false" aria-controls="luiAttachmentMenu">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="attachment-menu" id="luiAttachmentMenu" hidden>
+                          <label class="attachment-menu-item" for="luiFile">
+                            <input id="luiFile" type="file" accept=".xlsx,.xlsm,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel.sheet.macroEnabled.12" />
+                            <span class="excel-menu-icon">X</span>
+                            <span><strong id="luiFileLabel">添加 Excel 文件</strong><small>.xlsx 或 .xlsm，最大 50 MB</small></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="intent-switch" aria-label="任务类型">
+                        <button class="is-active" type="button" data-intent="collect" aria-pressed="true">采集数据</button>
+                        <button type="button" data-intent="finder" aria-pressed="false">寻找达人</button>
+                      </div>
+                    </div>
+                    <button class="composer-send" id="luiSend" type="submit" aria-label="发送任务">
+                      <span class="visually-hidden" id="luiSendLabel">发送</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6.5 10.5 12 5l5.5 5.5"/></svg>
+                    </button>
+                  </div>
+                </form>
+              </section>
+            </div>
+          </main>
+        </section>
+
+        <section class="screen" id="finder">
+          <div class="finder-grid">
+            <div class="finder-main">
+              <section class="panel filter-panel">
+                <div class="panel-head">
+                  <div>
+                    <h3>检索条件</h3>
+                  </div>
+                  <button class="filter-toggle" id="toggleFilterPanel" type="button" aria-label="收起检索条件" aria-expanded="true"></button>
+                </div>
+                <form class="filter-form" id="filterForm">
+                  <div class="search-capsule">
+                    <div class="strategy-picker">
+                      <button class="strategy-trigger" id="strategyTrigger" type="button" aria-label="选择寻找策略"></button>
+                      <div class="strategy-menu" id="strategyMenu">
+                        <label><input type="checkbox" name="strategyOption" value="综合推荐" checked />综合推荐</label>
+                        <label><input type="checkbox" name="strategyOption" value="精准内容" />精准内容</label>
+                        <label><input type="checkbox" name="strategyOption" value="类目铺底" />类目铺底</label>
+                        <label><input type="checkbox" name="strategyOption" value="表现优先" />表现优先</label>
+                        <label><input type="checkbox" name="strategyOption" value="性价比优先" />性价比优先</label>
+                      </div>
+                    </div>
+                    <input id="keywordInput" name="keyword" placeholder="请输入关键词，比如网球 网球服" autocomplete="off" spellcheck="false" />
+                    <label class="result-mode-toggle" id="resultModeToggleWrap">
+                      <input id="resultModeToggle" type="checkbox" />
+                      <span>在结果中检索</span>
+                    </label>
+                    <button class="capsule-search-button" id="searchBtn" type="submit" aria-label="运行检索"></button>
+                  </div>
+                  <div class="primary-filters">
+                    <label class="field">
+                      <span>博主类目</span>
+                      <select id="categorySelect" name="category"></select>
+                    </label>
+                    <label class="field">
+                      <span>粉丝数量</span>
+                      <select id="fanRangeSelect" name="fanRange">
+                        <option selected>不限</option>
+                        <option>路人（小红书粉丝＜300）</option>
+                        <option>素人（300≤粉丝＜5千）</option>
+                        <option>初级达人（5千≤粉丝＜5万）</option>
+                        <option>腰部达人（5万≤粉丝＜50万）</option>
+                        <option>头部达人（粉丝≥50万）</option>
+                      </select>
+                    </label>
+                    <label class="field">
+                      <span>合作类型</span>
+                      <select id="cooperationTypeSelect" name="cooperationType">
+                        <option>不限</option>
+                        <option>图文</option>
+                        <option>视频</option>
+                      </select>
+                    </label>
+                    <label class="field">
+                      <span>合作报价</span>
+                      <select id="priceRangeSelect" name="priceRange">
+                        <option>不限</option>
+                        <option>路人/素人：¥0-500</option>
+                        <option>初级达人：¥500-5,000</option>
+                        <option>腰部达人：¥5,000-15,000</option>
+                        <option>头部达人：¥15,000-100,000</option>
+                        <option>¥100,000+</option>
+                      </select>
+                    </label>
+                    <label class="field">
+                      <span>检索数量</span>
+                      <select id="resultLimitSelect" name="resultLimit">
+                        <option value="50" selected>50 位</option>
+                        <option value="100">100 位</option>
+                        <option value="150">150 位</option>
+                        <option value="200">200 位</option>
+                      </select>
+                    </label>
+                  </div>
+                  <details class="advanced-filters">
+                    <summary>高级筛选</summary>
+                    <div class="secondary-filters">
+                      <label class="field">
+                        <span>博主性别</span>
+                        <select id="bloggerGenderSelect" name="bloggerGender">
+                          <option>不限</option>
+                          <option>男性</option>
+                          <option>女性</option>
+                        </select>
+                      </label>
+                      <label class="field">
+                        <span>粉丝性别</span>
+                        <select id="fanGenderSelect" name="fanGender">
+                          <option>不限</option>
+                          <option>男性占比高</option>
+                          <option>女性占比高</option>
+                        </select>
+                      </label>
+                      <label class="field">
+                        <span>细分类目</span>
+                        <select id="subcategorySelect" name="subcategory"></select>
+                      </label>
+                      <label class="field">
+                        <span>结果排序</span>
+                        <select id="sortSelect" name="sort">
+                          <option>综合匹配</option>
+                          <option>粉丝数从高到低</option>
+                          <option>报价从低到高</option>
+                          <option>阅读中位数优先</option>
+                          <option>互动中位数优先</option>
+                        </select>
+                      </label>
+                    </div>
+                  </details>
+                  <p class="filter-hint" id="filterHint">关键词支持空格扩展，例如“网球 网球服”。报价为行业经验区间，实际以平台返回报价为准。</p>
+                </form>
+              </section>
+
+              <section class="panel result-panel">
+                <div class="result-toolbar">
+                  <div class="result-summary">
+                    <h3>达人结果</h3>
+                    <p id="resultMeta">尚未检索</p>
+                  </div>
+                  <div class="result-actions result-main-actions">
+                    <span class="selection-state">已选 <strong id="selectedCountInline">0</strong> 人</span>
+                    <button class="secondary-action" id="nextBatchBtn" type="button" disabled>换一批</button>
+                    <button class="secondary-action" id="addToCollector" type="button" disabled>加入队列</button>
+                  </div>
+                </div>
+                <div class="table-wrap result-table-wrap">
+                  <table class="candidate-table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <span class="table-select-head">
+                            达人
+                            <input id="selectAllRows" type="checkbox" aria-label="全选当前结果" />
+                          </span>
+                        </th>
+                        <th>账号</th>
+                        <th class="number-col">粉丝数</th>
+                        <th class="number-col">总互动数</th>
+                        <th class="number-col">图文报价</th>
+                        <th class="number-col">视频报价</th>
+                        <th class="number-col">阅读中位数</th>
+                        <th class="number-col">互动中位数</th>
+                        <th>推荐理由</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody id="candidateRows"></tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+
+            <aside class="finder-rail">
+              <section class="panel candidate-pool is-empty">
+                <div class="rail-head">
+                  <div>
+                    <h3>候选池</h3>
+                    <p id="poolMeta">等待选择达人</p>
+                  </div>
+                  <button class="text-action" id="clearSelection" type="button">清空</button>
+                </div>
+                <div class="pool-metrics">
+                  <div>
+                    <span>已选达人</span>
+                    <strong id="poolReadyCount">0</strong>
+                  </div>
+                  <div>
+                    <span>预估最低报价</span>
+                    <strong id="poolBudget">¥0</strong>
+                  </div>
+                  <div>
+                    <span>平均粉丝数</span>
+                    <strong id="poolAverageFans">0</strong>
+                  </div>
+                  <div>
+                    <span>平均报价</span>
+                    <strong id="poolAveragePrice">¥0</strong>
+                  </div>
+                </div>
+                <div class="pool-empty-guide" id="poolEmptyGuide">
+                  <strong>从结果表勾选达人</strong>
+                  <p>选中后这里会展开预算、均粉和类目分布。</p>
+                </div>
+                <div class="quality-box">
+                  <span>名单质量</span>
+                  <strong id="poolCategoryMix">暂无类目分布</strong>
+                  <p id="poolRisk">请选择达人后查看预算和风险提示。</p>
+                </div>
+                <div class="pool-list" id="poolList">
+                  <div class="empty-state">从结果表勾选达人后，这里会形成候选池。</div>
+                </div>
+                <button class="rail-primary" id="pushToCollector" type="button" disabled>加入采集队列</button>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen" id="collector">
+          <div class="collector-grid">
+            <section class="panel template-picker" aria-labelledby="templatePickerTitle">
+              <div class="template-picker-head">
+                <div>
+                  <h3 id="templatePickerTitle">取数模板</h3>
+                  <p id="templateHint">原有达人表现字段，支持候选池和 Excel 回填。</p>
+                </div>
+                <span class="template-current">当前：<strong id="selectedTemplateName">富士模板</strong></span>
+              </div>
+              <div class="template-options">
+                <label class="template-option">
+                  <input type="radio" name="templateId" value="fuji" checked />
+                  <span>
+                    <strong>富士模板</strong>
+                    <small>原有达人表现字段；支持候选池与 Excel。</small>
+                  </span>
+                </label>
+                <label class="template-option">
+                  <input type="radio" name="templateId" value="medela" />
+                  <span>
+                    <strong>美德乐模板</strong>
+                    <small>视频合作笔记 90 天全流量中位数、仅自然流数据、成本公式与推荐理由。</small>
+                  </span>
+                </label>
+                <label class="template-option">
+                  <input type="radio" name="templateId" value="dynamic" />
+                  <span>
+                    <strong>智能 Excel</strong>
+                    <small>自动解析任意表头；按字段取数，非蒲公英字段经证据审计后再决定是否填写。</small>
+                  </span>
+                </label>
+              </div>
+              <p class="template-note">智能 Excel 与美德乐模板需配置 DeepSeek API Key；合作、授权等无法由表现数据证明的字段会保持空白。</p>
+            </section>
+
+            <section class="panel import-card candidate-import-card">
+              <div class="panel-head">
+                <div>
+                  <h3>候选池导入</h3>
+                  <p>从找达人页已选名单开始采集。</p>
+                </div>
+              </div>
+              <div class="import-card-body">
+                <div class="import-state" id="finderImportState">
+                  <strong>尚未导入候选池</strong>
+                  <p>如果还没选择达人，点击后会回到找达人页勾选。</p>
+                </div>
+                <button class="primary-action full" id="importFromFinder" type="button">候选池导入</button>
+              </div>
+            </section>
+
+            <section class="panel import-card excel-import-card">
+              <div class="panel-head">
+                <div>
+                  <h3>Excel 导入</h3>
+                  <p>从外部达人主页链接表开始采集。</p>
+                </div>
+              </div>
+              <div class="import-card-body">
+                <label class="file-upload-zone" for="fileInput">
+                  <input id="fileInput" type="file" accept=".xlsx,.xlsm" />
+                  <strong id="fileName">上传达人主页链接 Excel</strong>
+                  <p>支持 .xlsx / .xlsm，系统会识别达人主页链接。</p>
+                </label>
+                <div class="import-state compact" id="excelImportState">
+                  <strong>等待上传 Excel</strong>
+                  <p>识别后请确认字段是否准确，再开始采集。</p>
+                </div>
+                <button class="secondary-action full" id="uploadBtn" type="button">识别 Excel</button>
+              </div>
+            </section>
+
+            <section class="panel contract-review" id="contractReview" hidden aria-live="polite">
+              <div class="panel-head">
+                <div>
+                  <h3>AI 对取数口径的理解</h3>
+                  <p id="contractSummary">识别 Excel 后，我会只追问无法确定的口径。</p>
+                </div>
+                <span class="status-pill muted" id="contractState">等待识别</span>
+              </div>
+              <div class="contract-groups" id="contractGroups"></div>
+              <div class="contract-questions" id="contractQuestions"></div>
+              <button class="primary-action" id="confirmContract" type="button">确认取数口径</button>
+            </section>
+
+            <details class="field-library" id="fieldLibraryPanel">
+              <summary class="field-library-head">
+                <div>
+                  <strong>采集字段</strong>
+                  <span id="fieldReviewText">默认采集核心字段，可按任务增减。</span>
+                </div>
+                <i aria-hidden="true"></i>
+              </summary>
+              <div class="field-library-actions">
+                <button class="text-action" id="selectDefaultFields" type="button">恢复默认</button>
+                <button class="text-action" id="saveFieldTemplate" type="button">保存为固化模板</button>
+              </div>
+              <div class="saved-template-list" id="savedTemplateList"></div>
+              <div class="field-checks" id="fieldLibrary"></div>
+            </details>
+
+            <section class="collector-actions-row">
+              <button class="primary-action full" id="startCollect" type="button" disabled>开始采集</button>
+              <a class="download-action disabled" id="downloadBtn" href="#">下载 Excel</a>
+            </section>
+
+            <section class="panel report-panel">
+              <div class="panel-head">
+                <div>
+                  <h3>运行日报</h3>
+                  <p>按当前采集任务实时更新。</p>
+                </div>
+              </div>
+              <div class="collector-summary">
+                <div class="summary-card">
+                  <span>任务达人</span>
+                  <strong id="jobTotal">0</strong>
+                </div>
+                <div class="summary-card">
+                  <span>已完成</span>
+                  <strong id="jobDone">0</strong>
+                </div>
+                <div class="summary-card">
+                  <span>待处理</span>
+                  <strong id="jobPending">0</strong>
+                </div>
+                <div class="summary-card">
+                  <span>任务状态</span>
+                  <strong id="jobStatus">等待导入</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel task-panel">
+              <div class="panel-head">
+                <div>
+                  <h3>执行过程记录</h3>
+                  <p id="collectorTaskMeta">等待导入</p>
+                </div>
+              </div>
+              <div class="task-list" id="taskList"></div>
+            </section>
+
+            <section class="panel log-panel">
+              <div class="panel-head">
+                <div>
+                  <h3>运行日志</h3>
+                  <p id="lastUpdate">暂无更新</p>
+                </div>
+              </div>
+              <div class="logs" id="logs">
+                <div class="log muted">等待任务开始</div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen" id="analytics">
+          <div class="analytics-shell">
+            <section class="panel analytics-hero">
+              <div>
+                <h2>管理后台</h2>
+              </div>
+              <div class="analytics-controls">
+                <label class="field">
+                  <span>观察窗口</span>
+                  <select id="analyticsDays">
+                    <option value="7">近 7 天</option>
+                    <option value="14" selected>近 14 天</option>
+                    <option value="30">近 30 天</option>
+                    <option value="90">近 90 天</option>
+                  </select>
+                </label>
+                <button class="secondary-action" id="refreshAnalytics" type="button">刷新数据</button>
+              </div>
+            </section>
+
+            <section class="panel admin-users-panel" id="adminUsersPanel">
+              <div class="panel-head">
+                <div>
+                  <h3>用户与角色</h3>
+                </div>
+                <button class="text-action" id="refreshAdminUsers" type="button">刷新</button>
+              </div>
+              <form class="admin-user-form" id="adminUserForm">
+                <label class="field">
+                  <span>姓名</span>
+                  <input id="adminUserName" autocomplete="off" required />
+                </label>
+                <label class="field">
+                  <span>邮箱</span>
+                  <input id="adminUserEmail" type="email" autocomplete="off" required />
+                </label>
+                <label class="field">
+                  <span>初始密码</span>
+                  <input id="adminUserPassword" type="password" minlength="12" autocomplete="new-password" required />
+                </label>
+                <label class="field">
+                  <span>角色</span>
+                  <select id="adminUserRole">
+                    <option value="media" selected>媒介用户</option>
+                    <option value="admin">管理员</option>
+                  </select>
+                </label>
+                <button class="primary-action" id="createAdminUser" type="submit">创建账号</button>
+              </form>
+              <p class="form-feedback" id="adminUserFeedback" role="status"></p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>用户</th>
+                      <th>角色</th>
+                      <th>状态</th>
+                      <th>最近登录</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminUserRows">
+                    <tr><td colspan="5" class="empty-cell">正在读取用户……</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel admin-shared-pgy-panel" id="adminSharedPgyPanel">
+              <div class="panel-head">
+                <div>
+                  <h3>团队蒲公英连接</h3>
+                </div>
+                <button class="text-action" id="refreshSharedPgy" type="button">刷新</button>
+              </div>
+              <p id="adminSharedPgyStatus">正在读取团队连接……</p>
+              <div class="shared-pgy-controls">
+                <label><input id="sharePgyWithMedia" type="checkbox" checked /> 媒介用户</label>
+                <label><input id="sharePgyWithAdmin" type="checkbox" checked /> 管理员</label>
+                <button class="primary-action" id="publishSharedPgy" type="button">共享当前连接</button>
+                <button class="text-action danger-text" id="revokeSharedPgy" type="button">撤销共享</button>
+              </div>
+              <p class="form-feedback" id="adminSharedPgyFeedback" role="status"></p>
+            </section>
+
+            <section class="analytics-kpis">
+              <div class="analytics-kpi">
+                <span>检索成功率</span>
+                <strong id="analyticsSearchRate">0%</strong>
+                <p id="analyticsSearchMeta">0 次检索</p>
+              </div>
+              <div class="analytics-kpi">
+                <span>结果入池率</span>
+                <strong id="analyticsSelectionRate">0%</strong>
+                <p id="analyticsSelectionMeta">0 位入池</p>
+              </div>
+              <div class="analytics-kpi">
+                <span>采集成功率</span>
+                <strong id="analyticsCollectRate">0%</strong>
+                <p id="analyticsCollectMeta">0 个任务完成</p>
+              </div>
+              <div class="analytics-kpi">
+                <span>Excel 下载率</span>
+                <strong id="analyticsDownloadRate">0%</strong>
+                <p id="analyticsDownloadMeta">0 次下载</p>
+              </div>
+            </section>
+
+            <section class="panel analytics-funnel-panel">
+              <div class="panel-head">
+                <div>
+                  <h3>业务漏斗</h3>
+                </div>
+              </div>
+              <div class="analytics-funnel" id="analyticsFunnel"></div>
+            </section>
+
+            <div class="analytics-grid">
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h3>关键词效率</h3>
+                  </div>
+                </div>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>关键词</th>
+                        <th class="number-col">检索</th>
+                        <th class="number-col">成功</th>
+                        <th class="number-col">返回达人</th>
+                      </tr>
+                    </thead>
+                    <tbody id="analyticsKeywordRows">
+                      <tr><td colspan="4" class="empty-cell">暂无关键词数据</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h3>采集稳定性</h3>
+                  </div>
+                </div>
+                <div class="analytics-stability" id="analyticsStability"></div>
+              </section>
+            </div>
+
+            <section class="panel" id="analyticsAgentPanel">
+              <div class="panel-head">
+                <div>
+                  <h3>Agent 运行</h3>
+                </div>
+              </div>
+              <div class="analytics-stability" id="analyticsAgent"></div>
+            </section>
+
+            <section class="panel" id="analyticsEventsPanel">
+              <div class="panel-head">
+                <div>
+                  <h3>最近事件</h3>
+                </div>
+              </div>
+              <div class="analytics-events" id="analyticsRecentEvents"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen" id="settings">
+          <div class="page-title">
+            <div>
+              <h2>个人中心</h2>
+              <p>先确认采集连接，再查看近期任务，最后管理账号与安全。</p>
+            </div>
+          </div>
+          <section class="settings-panel">
+            <article class="profile-section profile-pgy-section">
+              <div class="profile-pgy-top">
+                <header class="profile-section-head">
+                  <div>
+                    <span class="profile-section-kicker">采集准备</span>
+                    <h3>蒲公英连接</h3>
+                    <p id="profilePgyStatus">尚未连接</p>
+                  </div>
+                </header>
+                <div class="profile-actions">
+                  <button class="secondary-action" id="profileConnectPgy" type="button">连接或重新连接</button>
+                  <button class="primary-action" id="profileSavePgy" type="button" hidden>确认已登录并保存</button>
+                  <button class="text-action danger-text" id="profileDisconnectPgy" type="button" hidden>解除连接</button>
+                </div>
+              </div>
+              <div class="pgy-login-panel" id="pgyLoginPanel" hidden>
+                <div>
+                  <strong>蒲公英登录画面</strong>
+                  <p>可直接点击下方画面操作蒲公英；出现二维码后用小红书 App 扫描，登录完成再点击“确认已登录并保存”。</p>
+                </div>
+                <img id="pgyLoginPreview" alt="可点击的蒲公英登录页面预览" tabindex="0" />
+                <button class="secondary-action" id="refreshPgyLoginPreview" type="button">重新加载登录页</button>
+                <p class="form-feedback" id="pgyLoginPreviewFeedback" role="status"></p>
+              </div>
+            </article>
+            <article class="profile-section profile-performance-section">
+              <header class="profile-section-head">
+                <div>
+                  <span class="profile-section-kicker">最近 7 天</span>
+                  <h3>我的数据表现</h3>
+                </div>
+              </header>
+              <div class="profile-metrics" id="profilePerformance">
+                <span>正在读取最近任务……</span>
+              </div>
+            </article>
+            <article class="profile-section profile-account-section">
+              <header class="profile-section-head">
+                <div>
+                  <span class="profile-section-kicker">账号与安全</span>
+                  <h3>我的账号</h3>
+                  <p id="profileAccount">正在读取账号信息……</p>
+                </div>
+              </header>
+              <form class="profile-account-form" id="profileAccountForm">
+                <label class="field">
+                  <span>显示名称</span>
+                  <input id="profileDisplayName" autocomplete="name" />
+                </label>
+                <button class="secondary-action" type="submit">保存名称</button>
+              </form>
+              <p class="form-feedback" id="profileAccountFeedback" role="status"></p>
+              <details class="profile-security" id="profileSecurity">
+                <summary>密码与登录</summary>
+                <div class="profile-security-body">
+                  <form class="profile-password-form" id="profilePasswordForm">
+                    <label class="field">
+                      <span>当前密码</span>
+                      <input id="profileCurrentPassword" type="password" autocomplete="current-password" />
+                    </label>
+                    <label class="field">
+                      <span>新密码</span>
+                      <input id="profileNewPassword" type="password" minlength="12" autocomplete="new-password" />
+                    </label>
+                    <button class="secondary-action" type="submit">修改密码</button>
+                  </form>
+                  <button class="text-action danger-text" id="logoutAccount" type="button">退出登录</button>
+                </div>
+              </details>
+            </article>
+            <article class="profile-section profile-privacy-section">
+              <header class="profile-section-head">
+                <div>
+                  <span class="profile-section-kicker">数据管理</span>
+                  <h3>数据与隐私</h3>
+                </div>
+              </header>
+              <p>任务数据默认保存 7 天；你也可以在“任务记录”中提前删除。系统不会向用户或管理员展示 Cookie、API Key 和完整登录态。</p>
+            </article>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="auth-gate" id="authGate" hidden>
+      <form class="auth-card" id="authForm">
+        <img src="./logo.svg" alt="" />
+        <h2>登录寻达</h2>
+        <p>登录后将只看到自己的任务与蒲公英连接。</p>
+        <label id="authNameField" hidden>显示名称<input id="authDisplayName" autocomplete="name" /></label>
+        <label>邮箱<input id="authEmail" type="email" autocomplete="username" required /></label>
+        <label>密码<input id="authPassword" type="password" autocomplete="current-password" required /></label>
+        <p class="auth-error" id="authError" role="alert"></p>
+        <button class="primary-action" id="authSubmit" type="submit">登录</button>
+      </form>
+    </div>
+    <script src="./auth.js"></script>
+    <script src="./app.js"></script>
+    <script src="./history.js"></script>
+    <script src="./profile.js"></script>
+    <script src="./workbench.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

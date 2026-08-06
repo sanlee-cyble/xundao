@@ -1,0 +1,52 @@
+{
+  "inputExcel": "",
+  "sourceSheet": "Sheet1",
+  "outputDir": "outputs",
+  "rawDir": "raw",
+  "creatorsJson": "data/creators.json",
+  "mappedResultsJson": "data/mapped_results.json",
+  "userDataDir": ".pgy-browser-profile",
+  "baseUrl": "https://pgy.xiaohongshu.com",
+  "searchUrlCandidates": [
+    "https://pgy.xiaohongshu.com/solar/pre-trade/blogger",
+    "https://pgy.xiaohongshu.com/solar/pre-trade/blogger-market",
+    "https://pgy.xiaohongshu.com/solar/advertiser/patterns/kol",
+    "https://pgy.xiaohongshu.com"
+  ],
+  "networkAllowHostPatterns": [
+    "pgy.xiaohongshu.com",
+    "xiaohongshu.com"
+  ],
+  "responseMaxBytes": 2500000,
+  "autoSearchDelayMs": 2600,
+  "metricsHints": [
+    "fans",
+    "follower",
+    "follow",
+    "interaction",
+    "interact",
+    "like",
+    "collect",
+    "read",
+    "view",
+    "median",
+    "complete",
+    "finish",
+    "active",
+    "order",
+    "age",
+    "gender",
+    "province",
+    "city",
+    "region",
+    "price",
+    "报价",
+    "粉丝",
+    "互动",
+    "阅读",
+    "完播",
+    "画像",
+    "地域",
+    "下单"
+  ]
+}

@@ -1,0 +1,11 @@
+.git
+.DS_Store
+node_modules
+.pgy-browser-profile
+data
+runs
+raw
+outputs
+*.log
+*.sqlite
+*.sqlite-*

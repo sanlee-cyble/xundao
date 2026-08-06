@@ -1,0 +1,92 @@
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import test from "node:test";
+
+test("统一输入框同时提供采集和寻找模式", async () => {
+  const html = await fs.readFile(new URL("../public/index.html", import.meta.url), "utf8");
+  const workbench = await fs.readFile(new URL("../public/workbench.js", import.meta.url), "utf8");
+  assert.match(html, /data-intent="collect"/);
+  assert.match(html, /data-intent="finder"/);
+  assert.match(html, /id="luiComposer"/);
+  assert.match(html, /id="recentTasks"/);
+  assert.match(html, /id="conversation"/);
+  assert.match(html, /id="conversationJumpLatest"/);
+  assert.doesNotMatch(html, /id="luiFieldDrawer"/);
+  assert.doesNotMatch(html, /id="luiOpenFields"/);
+  assert.doesNotMatch(html, /data-field-preset=/);
+  assert.match(html, /id="luiAttachment"/);
+  assert.match(html, /id="newTaskButton"/);
+  assert.match(html, /id="taskHistorySearch"/);
+  assert.match(html, /class="sidebar-start"/);
+  assert.match(html, /id="luiAttachmentTrigger"/);
+  assert.match(html, /id="luiAttachmentMenu"/);
+  assert.match(html, /告诉我，找什么/);
+  assert.doesNotMatch(html, /寻达 Agent/);
+  assert.doesNotMatch(html, /添加 Excel、粘贴蒲公英链接，或直接描述需要的数据/);
+  assert.match(html, /任务记录/);
+  assert.doesNotMatch(html, /data-screen="records"/);
+  assert.doesNotMatch(html, /AI 工作台/);
+  assert.doesNotMatch(html, /id="loginBtnTop"/);
+  assert.match(html, /id="adminSharedPgyPanel"/);
+  assert.match(html, /id="publishSharedPgy"/);
+  assert.match(html, /id="revokeSharedPgy"/);
+  assert.doesNotMatch(html, /analyticsAccessPanel/);
+  assert.doesNotMatch(html, /谁能看到/);
+  assert.match(workbench, /acceptWorkbookFile/);
+  assert.match(workbench, /function newTask\(\)/);
+  assert.match(workbench, /setAttachmentMenu/);
+  assert.match(workbench, /selectIntent\("collect"\)/);
+  assert.match(workbench, /agent-run-stream/);
+  assert.match(workbench, /choose_collection_scope/);
+  assert.match(workbench, /submitCurrentTaskText/);
+  assert.match(workbench, /runSignature/);
+  assert.match(workbench, /采用上述建议/);
+  assert.doesNotMatch(workbench, /selectedFields/);
+});
+
+test("历史固化只对存在已解决字段合同的动态任务开放", async () => {
+  const history = await fs.readFile(new URL("../public/history.js", import.meta.url), "utf8");
+  assert.match(history, /task\.templateId === "dynamic"/);
+  assert.match(history, /&& task\.taskContract/);
+  assert.match(history, /task\.taskContract\.unresolvedCount/);
+});
+
+test("个人中心包含账号、蒲公英连接、数据表现和隐私", async () => {
+  const html = await fs.readFile(new URL("../public/index.html", import.meta.url), "utf8");
+  const profileScript = await fs.readFile(new URL("../public/profile.js", import.meta.url), "utf8");
+  const historyScript = await fs.readFile(new URL("../public/history.js", import.meta.url), "utf8");
+  const server = await fs.readFile(new URL("../src/web_server.mjs", import.meta.url), "utf8");
+  assert.match(html, /我的账号/);
+  assert.match(html, /蒲公英连接/);
+  assert.match(html, /pgyLoginPreview/);
+  assert.match(html, /重新加载登录页/);
+  assert.match(html, /我的数据表现/);
+  assert.match(html, /数据与隐私/);
+  assert.match(html, /id="profileAccountForm"/);
+  assert.match(html, /id="profilePasswordForm"/);
+  assert.match(html, /id="profileSecurity"/);
+  assert.match(html, /id="adminUserForm"/);
+  assert.match(html, /id="adminUserRows"/);
+  assert.match(profileScript, /\/api\/pgy\/connect\/input/);
+  assert.match(profileScript, /xRatio/);
+  assert.match(server, /handlePgyLoginInput/);
+  assert.match(server, /handlePublishSharedPgyConnection/);
+  assert.match(server, /workspaceConnectionAllowed/);
+  assert.match(html, /id="authGate"/);
+  assert.match(html, /id="authDisplayName"/);
+  assert.match(server, /handleAccountSetup/);
+  assert.match(server, /firstRunSetupRequired/);
+  assert.match(historyScript, /固化模板/);
+  assert.match(historyScript, /save-template/);
+});
+
+test("侧栏和设置页使用紧凑的三段式响应布局", async () => {
+  const css = await fs.readFile(new URL("../public/delivery.css", import.meta.url), "utf8");
+  assert.match(css, /--nav-width:\s*259px/);
+  assert.match(css, /grid-template-rows:\s*102px minmax\(0,\s*1fr\) 73px/);
+  assert.match(css, /\.recent-task\s*\{[^}]*width:\s*248px[^}]*height:\s*35px/s);
+  assert.match(css, /\.recent-task-items\s*\{[^}]*display:\s*block[^}]*max-height:\s*none[^}]*overflow-y:\s*auto/s);
+  assert.match(css, /\.sidebar-start\s*\{[^}]*border-bottom:\s*1px solid #deded8/s);
+  assert.match(css, /\.lui-workbench\.is-empty \.lui-thread\s*\{[^}]*gap:\s*40px/s);
+  assert.match(css, /\.settings-panel\s*\{[^}]*grid-template-columns:\s*repeat\(12,\s*minmax\(0,\s*1fr\)\)/s);
+});

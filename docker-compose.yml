@@ -1,0 +1,73 @@
+name: xundao
+
+services:
+  app:
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgres://xundao:${POSTGRES_PASSWORD}@db:5432/xundao}
+      DATABASE_SSL: ${DATABASE_SSL:-false}
+      HOST: 0.0.0.0
+      PORT: ${PORT:-8731}
+      XUNDAO_DATA_DIR: ${XUNDAO_DATA_DIR:-/app/data}
+      XUNDAO_RUNS_DIR: ${XUNDAO_RUNS_DIR:-/app/runs}
+      PGY_USER_DATA_DIR: ${PGY_USER_DATA_DIR:-/app/.pgy-browser-profile}
+      PGY_USER_DATA_ROOT: ${PGY_USER_DATA_ROOT:-/app/pgy-profiles}
+      PGY_CONNECTION_ENCRYPTION_KEY: ${PGY_CONNECTION_ENCRYPTION_KEY}
+      XUNDAO_DEFAULT_WORKSPACE_ID: ${XUNDAO_DEFAULT_WORKSPACE_ID:-team}
+      PGY_BROWSER_CHANNEL: ${PGY_BROWSER_CHANNEL:-bundled}
+      PGY_LOGIN_HEADLESS: ${PGY_LOGIN_HEADLESS:-true}
+      PGY_STORAGE_STATE_PATH: ${PGY_STORAGE_STATE_PATH:-}
+      AUTH_REQUIRED: ${AUTH_REQUIRED:-true}
+      BOOTSTRAP_ADMIN_EMAIL: ${BOOTSTRAP_ADMIN_EMAIL}
+      BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD}
+      SESSION_TTL_DAYS: ${SESSION_TTL_DAYS:-14}
+      COOKIE_SECURE: ${COOKIE_SECURE:-true}
+      TASK_RETENTION_DAYS: ${TASK_RETENTION_DAYS:-7}
+      TASK_RETENTION_CLEANUP_ENABLED: ${TASK_RETENTION_CLEANUP_ENABLED:-true}
+      QWEN_API_KEY: ${QWEN_API_KEY:-}
+      QWEN_API_BASE: ${QWEN_API_BASE:-https://dashscope.aliyuncs.com/compatible-mode/v1}
+      QWEN_MODEL: ${QWEN_MODEL:-qwen3.7-max}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      DEEPSEEK_API_BASE: ${DEEPSEEK_API_BASE:-https://api.deepseek.com}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-v4-pro}
+      MODEL_TIMEOUT_MS: ${MODEL_TIMEOUT_MS:-90000}
+      ANALYTICS_DEFAULT_DAYS: ${ANALYTICS_DEFAULT_DAYS:-14}
+    ports:
+      - "127.0.0.1:8731:8731"
+    volumes:
+      - xundao_data:/app/data
+      - xundao_runs:/app/runs
+      - xundao_raw:/app/raw
+      - xundao_outputs:/app/outputs
+      - xundao_pgy_profile:/app/.pgy-browser-profile
+      - xundao_pgy_profiles:/app/pgy-profiles
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: xundao
+      POSTGRES_USER: xundao
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./deploy/postgres/schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U xundao -d xundao"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  xundao_data:
+  xundao_runs:
+  xundao_raw:
+  xundao_outputs:
+  xundao_pgy_profile:
+  xundao_pgy_profiles:

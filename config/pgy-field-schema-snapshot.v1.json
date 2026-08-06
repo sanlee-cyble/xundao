@@ -1,0 +1,4391 @@
+{
+  "schemaVersion": "1.0.0",
+  "metadata": {
+    "generatedAt": "2026-07-31T06:34:17.257Z",
+    "capturedAt": "2026-07-31T06:28:22.750Z",
+    "platformDataUpdateDate": "2026-07-30",
+    "sourceArtifact": "outputs/019f8e39-6e0c-7310-8d13-6b9b08cc170e/蒲公英达人_5649fae4_全量可请求数据.json"
+  },
+  "coverage": {
+    "successfulScopeGroups": 25,
+    "uniqueSuccessfulRequests": 44
+  },
+  "fieldCatalog": {
+    "scopeDimensions": {
+      "scene": {
+        "daily": "日常笔记",
+        "cooperation": "合作笔记"
+      },
+      "contentType": {
+        "image": "图文笔记",
+        "video": "视频笔记",
+        "all": "图文+视频"
+      },
+      "window": {
+        "30d": "近 30 天",
+        "90d": "近 90 天"
+      },
+      "traffic": {
+        "all": "全流量",
+        "natural": "仅自然流量"
+      }
+    },
+    "schemas": {
+      "creatorProfile": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "accumCommonImpMedinNum30d",
+          "field": "accumCommonImpMedinNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "accumCoopImpMedinNum30d",
+          "field": "accumCoopImpMedinNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "accumPicCommonImpMedinNum30d",
+          "field": "accumPicCommonImpMedinNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "accumVideoCommonImpMedinNum30d",
+          "field": "accumVideoCommonImpMedinNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "activityList",
+          "field": "activityList",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 0,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "algoRecommendReasons",
+          "field": "algoRecommendReasons",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "authorityList",
+          "field": "authorityList",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "avgAgmv90d",
+          "field": "avgAgmv90d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "avgLiveViewerNum",
+          "field": "avgLiveViewerNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "businessNoteCount",
+          "field": "businessNoteCount",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "buyerType",
+          "field": "buyerType",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "classifyCode",
+          "field": "classifyCode",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "clickMidNum",
+          "field": "clickMidNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "clickMidNumMcn",
+          "field": "clickMidNumMcn",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "clothingIndustryPrice",
+          "field": "clothingIndustryPrice",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "clothingIndustryPrice.bizType",
+          "field": "bizType",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "clothingIndustryPrice.industryId",
+          "field": "industryId",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "蒲公英原始标识字段"
+        },
+        {
+          "path": "clothingIndustryPrice.picturePrice",
+          "field": "picturePrice",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "图文笔记一口价"
+        },
+        {
+          "path": "clothingIndustryPrice.pictureState",
+          "field": "pictureState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "clothingIndustryPrice.videoPrice",
+          "field": "videoPrice",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "视频笔记一口价"
+        },
+        {
+          "path": "clothingIndustryPrice.videoState",
+          "field": "videoState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "contentTags",
+          "field": "contentTags",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "controlState",
+          "field": "controlState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "cooperateState",
+          "field": "cooperateState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "cooperType",
+          "field": "cooperType",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "coopNoteNum30d",
+          "field": "coopNoteNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "cpc",
+          "field": "cpc",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "cps",
+          "field": "cps",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "currentLevel",
+          "field": "currentLevel",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "efficiencyValidUser",
+          "field": "efficiencyValidUser",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateCpuv30d",
+          "field": "estimateCpuv30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureCpm",
+          "field": "estimatePictureCpm",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureCpmCompare",
+          "field": "estimatePictureCpmCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureEngageCost",
+          "field": "estimatePictureEngageCost",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "estimatePictureEngageCostCompare",
+          "field": "estimatePictureEngageCostCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoCpm",
+          "field": "estimateVideoCpm",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoCpmCompare",
+          "field": "estimateVideoCpmCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoEngageCost",
+          "field": "estimateVideoEngageCost",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "estimateVideoEngageCostCompare",
+          "field": "estimateVideoEngageCostCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "fans30GrowthNum",
+          "field": "fans30GrowthNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "fans30GrowthRate",
+          "field": "fans30GrowthRate",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        },
+        {
+          "path": "fansActiveIn28dLv",
+          "field": "fansActiveIn28dLv",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "fansCount",
+          "field": "fansCount",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "粉丝数（兼容字段）"
+        },
+        {
+          "path": "fansEngageNum",
+          "field": "fansEngageNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "fansEngageNum30dLv",
+          "field": "fansEngageNum30dLv",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "fansNum",
+          "field": "fansNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "粉丝数"
+        },
+        {
+          "path": "fansRiseNum",
+          "field": "fansRiseNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "fbState",
+          "field": "fbState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "featureTags",
+          "field": "featureTags",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 1,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "featureTags[]",
+          "field": "featureTags",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "forecastGroupCoverRateLower",
+          "field": "forecastGroupCoverRateLower",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "forecastGroupCoverRateUpper",
+          "field": "forecastGroupCoverRateUpper",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "forecastReadUvLower",
+          "field": "forecastReadUvLower",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "forecastReadUvUpper",
+          "field": "forecastReadUvUpper",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "gender",
+          "field": "gender",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人性别"
+        },
+        {
+          "path": "goodRecommendPermission",
+          "field": "goodRecommendPermission",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "hasBuyerAuth",
+          "field": "hasBuyerAuth",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "headPhoto",
+          "field": "headPhoto",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "URL",
+          "description": "达人头像地址"
+        },
+        {
+          "path": "homePageDisplay",
+          "field": "homePageDisplay",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "hundredLikePercent30",
+          "field": "hundredLikePercent30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "industryTag",
+          "field": "industryTag",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "intentionInfo",
+          "field": "intentionInfo",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "interMidCoop30",
+          "field": "interMidCoop30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "interMidNum",
+          "field": "interMidNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "inviteReply48hNumRatio",
+          "field": "inviteReply48hNumRatio",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "isCollect",
+          "field": "isCollect",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "isIndustryRecommend",
+          "field": "isIndustryRecommend",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "isStar",
+          "field": "isStar",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "kliveCnt30d",
+          "field": "kliveCnt30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "kolHeadLabel",
+          "field": "kolHeadLabel",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "kolType",
+          "field": "kolType",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "likeCollectCountInfo",
+          "field": "likeCollectCountInfo",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "live",
+          "field": "live",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "liveGMV",
+          "field": "liveGMV",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "liveId",
+          "field": "liveId",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "蒲公英原始标识字段"
+        },
+        {
+          "path": "liveImg",
+          "field": "liveImg",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "URL",
+          "description": "蒲公英原始图片或链接字段"
+        },
+        {
+          "path": "liveSign",
+          "field": "liveSign",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "location",
+          "field": "location",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人所在地"
+        },
+        {
+          "path": "lowActive",
+          "field": "lowActive",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "lowerPrice",
+          "field": "lowerPrice",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "marketTarget",
+          "field": "marketTarget",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "matchNoteNumber",
+          "field": "matchNoteNumber",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mcpuvNum30d",
+          "field": "mcpuvNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mCpuvNum30d",
+          "field": "mCpuvNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mengagementNum",
+          "field": "mengagementNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mEngagementNum",
+          "field": "mEngagementNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mengagementNumMcn",
+          "field": "mengagementNumMcn",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mEngagementNumMcn",
+          "field": "mEngagementNumMcn",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "name",
+          "field": "name",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人昵称"
+        },
+        {
+          "path": "newHighQuality",
+          "field": "newHighQuality",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "nextLevel",
+          "field": "nextLevel",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "nextPicturePrice",
+          "field": "nextPicturePrice",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "nextVideoPrice",
+          "field": "nextVideoPrice",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "note",
+          "field": "note",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteList",
+          "field": "noteList",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteSign",
+          "field": "noteSign",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "overflowNum",
+          "field": "overflowNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "personalTags",
+          "field": "personalTags",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "picPriceRemind",
+          "field": "picPriceRemind",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureClickMidNum",
+          "field": "pictureClickMidNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "pictureCpcBasePrice",
+          "field": "pictureCpcBasePrice",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "pictureCpcEstimateNum",
+          "field": "pictureCpcEstimateNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "pictureCpcInCart",
+          "field": "pictureCpcInCart",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureCpcPerPrice",
+          "field": "pictureCpcPerPrice",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "pictureHundredLikePercent30",
+          "field": "pictureHundredLikePercent30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureInCart",
+          "field": "pictureInCart",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureInterMidNum",
+          "field": "pictureInterMidNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "picturePrice",
+          "field": "picturePrice",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "图文笔记一口价"
+        },
+        {
+          "path": "picturePriceGtZero",
+          "field": "picturePriceGtZero",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureReadCost",
+          "field": "pictureReadCost",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "pictureShowState",
+          "field": "pictureShowState",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureState",
+          "field": "pictureState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureThousandLikePercent30",
+          "field": "pictureThousandLikePercent30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "predictiveExposure",
+          "field": "predictiveExposure",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "priceState",
+          "field": "priceState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "processingAuthorities",
+          "field": "processingAuthorities",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "promiseImpNum",
+          "field": "promiseImpNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "readMidCoop30",
+          "field": "readMidCoop30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "recommend",
+          "field": "recommend",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "recommendReason",
+          "field": "recommendReason",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "redId",
+          "field": "redId",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "小红书号"
+        },
+        {
+          "path": "resemblance",
+          "field": "resemblance",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "seedAndHarcest",
+          "field": "seedAndHarcest",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "sellerRealIncomeAmt90d",
+          "field": "sellerRealIncomeAmt90d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "showPrice",
+          "field": "showPrice",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "showPromiseTag",
+          "field": "showPromiseTag",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "specialIndustryLimit",
+          "field": "specialIndustryLimit",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "thousandLikePercent30",
+          "field": "thousandLikePercent30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "top2CategoryList",
+          "field": "top2CategoryList",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "totalNoteCount",
+          "field": "totalNoteCount",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "tradeType",
+          "field": "tradeType",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "travelAreaList",
+          "field": "travelAreaList",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "type",
+          "field": "type",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 0,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "userId",
+          "field": "userId",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "蒲公英达人唯一标识"
+        },
+        {
+          "path": "userType",
+          "field": "userType",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "valid",
+          "field": "valid",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "蒲公英原始标识字段"
+        },
+        {
+          "path": "videoClickMidNum",
+          "field": "videoClickMidNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "videoCpcBasePrice",
+          "field": "videoCpcBasePrice",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "videoCpcEstimateNum",
+          "field": "videoCpcEstimateNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "videoCpcInCart",
+          "field": "videoCpcInCart",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoCpcPerPrice",
+          "field": "videoCpcPerPrice",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "videoCpcState",
+          "field": "videoCpcState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoFinishRate",
+          "field": "videoFinishRate",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        },
+        {
+          "path": "videoHundredLikePercent30",
+          "field": "videoHundredLikePercent30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoInCart",
+          "field": "videoInCart",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoInterMidNum",
+          "field": "videoInterMidNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "videoPrice",
+          "field": "videoPrice",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "视频笔记一口价"
+        },
+        {
+          "path": "videoPriceGtZero",
+          "field": "videoPriceGtZero",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoPriceRemind",
+          "field": "videoPriceRemind",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoReadCost",
+          "field": "videoReadCost",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "videoShowState",
+          "field": "videoShowState",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoState",
+          "field": "videoState",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoThousandLikePercent30",
+          "field": "videoThousandLikePercent30",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "creatorProfile 数据域的蒲公英原始字段"
+        }
+      ],
+      "contentTags": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 0,
+          "unit": "platform_native",
+          "description": "contentTags 数据域的蒲公英原始字段"
+        }
+      ],
+      "featureTags": [
+        {
+          "path": "[]",
+          "field": "",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "featureTags 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "[].createTime",
+          "field": "createTime",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "featureTags 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "[].id",
+          "field": "id",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "蒲公英原始标识字段"
+        },
+        {
+          "path": "[].name",
+          "field": "name",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人昵称"
+        },
+        {
+          "path": "[].proTag",
+          "field": "proTag",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "featureTags 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "[].reason",
+          "field": "reason",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "featureTags 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "[].status",
+          "field": "status",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "featureTags 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "[].tagId",
+          "field": "tagId",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "蒲公英原始标识字段"
+        },
+        {
+          "path": "[].updateTime",
+          "field": "updateTime",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "featureTags 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 1,
+          "unit": "platform_native",
+          "description": "featureTags 数据域的蒲公英原始字段"
+        }
+      ],
+      "fansProfile": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "ages",
+          "field": "ages",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 5,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "ages[]",
+          "field": "ages",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "ages[].group",
+          "field": "group",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "ages[].percent",
+          "field": "percent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "cities",
+          "field": "cities",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 10,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "cities[]",
+          "field": "cities",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "cities[].name",
+          "field": "name",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人昵称"
+        },
+        {
+          "path": "cities[].percent",
+          "field": "percent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "dateKey",
+          "field": "dateKey",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "数据日期"
+        },
+        {
+          "path": "devices",
+          "field": "devices",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 10,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "devices[]",
+          "field": "devices",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "devices[].desc",
+          "field": "desc",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "devices[].name",
+          "field": "name",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人昵称"
+        },
+        {
+          "path": "devices[].percent",
+          "field": "percent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "gender",
+          "field": "gender",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人性别"
+        },
+        {
+          "path": "gender.female",
+          "field": "female",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "gender.male",
+          "field": "male",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "interests",
+          "field": "interests",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 20,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "interests[]",
+          "field": "interests",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "interests[].name",
+          "field": "name",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人昵称"
+        },
+        {
+          "path": "interests[].percent",
+          "field": "percent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "provinces",
+          "field": "provinces",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 33,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "provinces[]",
+          "field": "provinces",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansProfile 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "provinces[].name",
+          "field": "name",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "达人昵称"
+        },
+        {
+          "path": "provinces[].percent",
+          "field": "percent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        }
+      ],
+      "fansSummary": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "activeFansBeyondRate",
+          "field": "activeFansBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "activeFansL28",
+          "field": "activeFansL28",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "activeFansRate",
+          "field": "activeFansRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        },
+        {
+          "path": "engageFansBeyondRate",
+          "field": "engageFansBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "engageFansL30",
+          "field": "engageFansL30",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "engageFansRate",
+          "field": "engageFansRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        },
+        {
+          "path": "fansGrowthBeyondRate",
+          "field": "fansGrowthBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "fansGrowthRate",
+          "field": "fansGrowthRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        },
+        {
+          "path": "fansIncreaseNum",
+          "field": "fansIncreaseNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "fansNum",
+          "field": "fansNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "粉丝数"
+        },
+        {
+          "path": "payFansUserNum30d",
+          "field": "payFansUserNum30d",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "payFansUserRate30d",
+          "field": "payFansUserRate30d",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "readFansBeyondRate",
+          "field": "readFansBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "readFansIn30",
+          "field": "readFansIn30",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "fansSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "readFansRate",
+          "field": "readFansRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        }
+      ],
+      "dataSummary": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "activeDayInLast7",
+          "field": "activeDayInLast7",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dateKey",
+          "field": "dateKey",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "数据日期"
+        },
+        {
+          "path": "easyConnect",
+          "field": "easyConnect",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureCpm",
+          "field": "estimatePictureCpm",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureCpmCompare",
+          "field": "estimatePictureCpmCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureCpuv",
+          "field": "estimatePictureCpuv",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureCpuvCompare",
+          "field": "estimatePictureCpuvCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimatePictureEngageCost",
+          "field": "estimatePictureEngageCost",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "estimatePictureEngageCostCompare",
+          "field": "estimatePictureEngageCostCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoCpm",
+          "field": "estimateVideoCpm",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoCpmCompare",
+          "field": "estimateVideoCpmCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoCpuv",
+          "field": "estimateVideoCpuv",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoCpuvCompare",
+          "field": "estimateVideoCpuvCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "estimateVideoEngageCost",
+          "field": "estimateVideoEngageCost",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "estimateVideoEngageCostCompare",
+          "field": "estimateVideoEngageCostCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "fans30GrowthBeyondRate",
+          "field": "fans30GrowthBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "fans30GrowthRate",
+          "field": "fans30GrowthRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        },
+        {
+          "path": "interactionBeyondRate",
+          "field": "interactionBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "interactionMedian",
+          "field": "interactionMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "互动中位数"
+        },
+        {
+          "path": "inviteNum",
+          "field": "inviteNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "isActive",
+          "field": "isActive",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "kolAdvantage",
+          "field": "kolAdvantage",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "kolAdvantageHover",
+          "field": "kolAdvantageHover",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mAccumImpCompare",
+          "field": "mAccumImpCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mAccumImpNum",
+          "field": "mAccumImpNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mCpuvNum",
+          "field": "mCpuvNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mCpuvNumCompare",
+          "field": "mCpuvNumCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mEngagementNum",
+          "field": "mEngagementNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mEngagementNumCompare",
+          "field": "mEngagementNumCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mEngagementNumOld",
+          "field": "mEngagementNumOld",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mValidRawReadFeedCompare",
+          "field": "mValidRawReadFeedCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mValidRawReadFeedNum",
+          "field": "mValidRawReadFeedNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "noteNumber",
+          "field": "noteNumber",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "当前口径内笔记数"
+        },
+        {
+          "path": "noteType",
+          "field": "noteType",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 2,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteType[]",
+          "field": "noteType",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteType[].contentTag",
+          "field": "contentTag",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteType[].percent",
+          "field": "percent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "picReadCost",
+          "field": "picReadCost",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "picReadCostCompare",
+          "field": "picReadCostCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureCase",
+          "field": "pictureCase",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pictureReadBeyondRate",
+          "field": "pictureReadBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "pictureReadCost",
+          "field": "pictureReadCost",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "readMedian",
+          "field": "readMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "阅读中位数"
+        },
+        {
+          "path": "readMedianBeyondRate",
+          "field": "readMedianBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "responseRate",
+          "field": "responseRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始比率字段"
+        },
+        {
+          "path": "tradeNames",
+          "field": "tradeNames",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 0,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoCase",
+          "field": "videoCase",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoReadBeyondRate",
+          "field": "videoReadBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "videoReadCost",
+          "field": "videoReadCost",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "CNY_or_platform_native",
+          "description": "蒲公英原始价格或成本字段"
+        },
+        {
+          "path": "videoReadCostCompare",
+          "field": "videoReadCostCompare",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoReadCostV2",
+          "field": "videoReadCostV2",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "dataSummary 数据域的蒲公英原始字段"
+        }
+      ],
+      "notesFullTraffic": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "collectMedian",
+          "field": "collectMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "收藏中位数"
+        },
+        {
+          "path": "commentMedian",
+          "field": "commentMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "评论中位数"
+        },
+        {
+          "path": "hundredLikePercent",
+          "field": "hundredLikePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "百赞笔记比例"
+        },
+        {
+          "path": "impMedian",
+          "field": "impMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "曝光中位数"
+        },
+        {
+          "path": "impMedianBeyondRate",
+          "field": "impMedianBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "interactionBeyondRate",
+          "field": "interactionBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "interactionMedian",
+          "field": "interactionMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "互动中位数"
+        },
+        {
+          "path": "interactionRate",
+          "field": "interactionRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "互动率"
+        },
+        {
+          "path": "likeMedian",
+          "field": "likeMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "点赞中位数"
+        },
+        {
+          "path": "longTermCommonNoteVo",
+          "field": "longTermCommonNoteVo",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.endPublishTime",
+          "field": "endPublishTime",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.longTermFindPagePercent",
+          "field": "longTermFindPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.longTermFollowPagePercent",
+          "field": "longTermFollowPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.longTermKolHomePagePercent",
+          "field": "longTermKolHomePagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.longTermOtherPagePercent",
+          "field": "longTermOtherPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.longTermReadBeyondRate",
+          "field": "longTermReadBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "longTermCommonNoteVo.longTermReadNum",
+          "field": "longTermReadNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.longTermSearchPagePercent",
+          "field": "longTermSearchPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.noteNumber",
+          "field": "noteNumber",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "当前口径内笔记数"
+        },
+        {
+          "path": "longTermCommonNoteVo.recentFindPagePercent",
+          "field": "recentFindPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.recentFollowPagePercent",
+          "field": "recentFollowPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.recentKolHomePagePercent",
+          "field": "recentKolHomePagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.recentOtherPagePercent",
+          "field": "recentOtherPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.recentReadBeyondRate",
+          "field": "recentReadBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "longTermCommonNoteVo.recentReadNum",
+          "field": "recentReadNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.recentSearchPagePercent",
+          "field": "recentSearchPagePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCommonNoteVo.startPublishTime",
+          "field": "startPublishTime",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo",
+          "field": "longTermCooperateNoteVo",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.endPublishTime",
+          "field": "endPublishTime",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.longTermFindPagePercent",
+          "field": "longTermFindPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.longTermFollowPagePercent",
+          "field": "longTermFollowPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.longTermKolHomePagePercent",
+          "field": "longTermKolHomePagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.longTermOtherPagePercent",
+          "field": "longTermOtherPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.longTermReadBeyondRate",
+          "field": "longTermReadBeyondRate",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "longTermCooperateNoteVo.longTermReadNum",
+          "field": "longTermReadNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.longTermSearchPagePercent",
+          "field": "longTermSearchPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.noteNumber",
+          "field": "noteNumber",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "当前口径内笔记数"
+        },
+        {
+          "path": "longTermCooperateNoteVo.recentFindPagePercent",
+          "field": "recentFindPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.recentFollowPagePercent",
+          "field": "recentFollowPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.recentKolHomePagePercent",
+          "field": "recentKolHomePagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.recentOtherPagePercent",
+          "field": "recentOtherPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.recentReadBeyondRate",
+          "field": "recentReadBeyondRate",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "longTermCooperateNoteVo.recentReadNum",
+          "field": "recentReadNum",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.recentSearchPagePercent",
+          "field": "recentSearchPagePercent",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "longTermCooperateNoteVo.startPublishTime",
+          "field": "startPublishTime",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "mengagementNum",
+          "field": "mengagementNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mEngagementNum",
+          "field": "mEngagementNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mfollowCnt",
+          "field": "mfollowCnt",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "mFollowCnt",
+          "field": "mFollowCnt",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "noteNumber",
+          "field": "noteNumber",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "当前口径内笔记数"
+        },
+        {
+          "path": "notes",
+          "field": "notes",
+          "dataTypes": [
+            "array",
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": 14,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[]",
+          "field": "notes",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[].canJump",
+          "field": "canJump",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[].collectBeyondRate",
+          "field": "collectBeyondRate",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "notes[].collectNum",
+          "field": "collectNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "笔记收藏量"
+        },
+        {
+          "path": "notes[].date",
+          "field": "date",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[].imgUrl",
+          "field": "imgUrl",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "URL",
+          "description": "笔记封面地址"
+        },
+        {
+          "path": "notes[].impBeyondRate",
+          "field": "impBeyondRate",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "notes[].impNum",
+          "field": "impNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "notes[].interactionBeyondRate",
+          "field": "interactionBeyondRate",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "notes[].interactionNum",
+          "field": "interactionNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "notes[].likeBeyondRate",
+          "field": "likeBeyondRate",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "notes[].likeNum",
+          "field": "likeNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "笔记点赞量"
+        },
+        {
+          "path": "notes[].noteId",
+          "field": "noteId",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "笔记唯一标识"
+        },
+        {
+          "path": "notes[].publishTime",
+          "field": "publishTime",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[].readBeyondRate",
+          "field": "readBeyondRate",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "notes[].readNum",
+          "field": "readNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "笔记阅读量"
+        },
+        {
+          "path": "notes[].title",
+          "field": "title",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "笔记标题"
+        },
+        {
+          "path": "notes[].type",
+          "field": "type",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteType",
+          "field": "noteType",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 2,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteType[]",
+          "field": "noteType",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteType[].contentTag",
+          "field": "contentTag",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "noteType[].percent",
+          "field": "percent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "蒲公英原始百分比字段"
+        },
+        {
+          "path": "pagePercentVo",
+          "field": "pagePercentVo",
+          "dataTypes": [
+            "null",
+            "object"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "pagePercentVo.impDetailPercent",
+          "field": "impDetailPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "曝光来源：博主个人页占比"
+        },
+        {
+          "path": "pagePercentVo.impFollowPercent",
+          "field": "impFollowPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "曝光来源：关注页占比"
+        },
+        {
+          "path": "pagePercentVo.impHomefeedPercent",
+          "field": "impHomefeedPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "曝光来源：发现页占比"
+        },
+        {
+          "path": "pagePercentVo.impNearbyPercent",
+          "field": "impNearbyPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "曝光来源：附近页占比"
+        },
+        {
+          "path": "pagePercentVo.impOtherPercent",
+          "field": "impOtherPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "曝光来源：其他占比"
+        },
+        {
+          "path": "pagePercentVo.impSearchPercent",
+          "field": "impSearchPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "曝光来源：搜索页占比"
+        },
+        {
+          "path": "pagePercentVo.readDetailPercent",
+          "field": "readDetailPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "阅读来源：博主个人页占比"
+        },
+        {
+          "path": "pagePercentVo.readFollowPercent",
+          "field": "readFollowPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "阅读来源：关注页占比"
+        },
+        {
+          "path": "pagePercentVo.readHomefeedPercent",
+          "field": "readHomefeedPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "阅读来源：发现页占比"
+        },
+        {
+          "path": "pagePercentVo.readNearbyPercent",
+          "field": "readNearbyPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "阅读来源：附近页占比"
+        },
+        {
+          "path": "pagePercentVo.readOtherPercent",
+          "field": "readOtherPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "阅读来源：其他占比"
+        },
+        {
+          "path": "pagePercentVo.readSearchPercent",
+          "field": "readSearchPercent",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "阅读来源：搜索页占比"
+        },
+        {
+          "path": "picture3sViewRate",
+          "field": "picture3sViewRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "图文 3 秒阅读率"
+        },
+        {
+          "path": "readMedian",
+          "field": "readMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "阅读中位数"
+        },
+        {
+          "path": "readMedianBeyondRate",
+          "field": "readMedianBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "shareMedian",
+          "field": "shareMedian",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "分享中位数"
+        },
+        {
+          "path": "thousandLikePercent",
+          "field": "thousandLikePercent",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "千赞笔记比例"
+        },
+        {
+          "path": "tradeNames",
+          "field": "tradeNames",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesFullTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "videoFullViewBeyondRate",
+          "field": "videoFullViewBeyondRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "超过同量级达人比例"
+        },
+        {
+          "path": "videoFullViewRate",
+          "field": "videoFullViewRate",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "percentage_or_ratio_native",
+          "description": "视频完播率"
+        },
+        {
+          "path": "videoNoteNumber",
+          "field": "videoNoteNumber",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "当前口径内视频笔记数"
+        }
+      ],
+      "notesNaturalTraffic": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "null",
+            "object"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dailyData",
+          "field": "dailyData",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 30,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dailyData[]",
+          "field": "dailyData",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dailyData[].cpe",
+          "field": "cpe",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dailyData[].cpm",
+          "field": "cpm",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dailyData[].cpuv",
+          "field": "cpuv",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dailyData[].cpv",
+          "field": "cpv",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "dailyData[].dateKey",
+          "field": "dateKey",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "数据日期"
+        },
+        {
+          "path": "dailyData[].engage",
+          "field": "engage",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "仅自然流量互动量"
+        },
+        {
+          "path": "dailyData[].imp",
+          "field": "imp",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "仅自然流量曝光量"
+        },
+        {
+          "path": "dailyData[].read",
+          "field": "read",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "仅自然流量阅读量"
+        },
+        {
+          "path": "dailyData[].thirdUserNum",
+          "field": "thirdUserNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "sumData",
+          "field": "sumData",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "sumData.cpe",
+          "field": "cpe",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "sumData.cpm",
+          "field": "cpm",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "sumData.cpuv",
+          "field": "cpuv",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "sumData.cpv",
+          "field": "cpv",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "notesNaturalTraffic 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "sumData.dateKey",
+          "field": "dateKey",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "数据日期"
+        },
+        {
+          "path": "sumData.engage",
+          "field": "engage",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "仅自然流量互动量"
+        },
+        {
+          "path": "sumData.imp",
+          "field": "imp",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "仅自然流量曝光量"
+        },
+        {
+          "path": "sumData.read",
+          "field": "read",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "仅自然流量阅读量"
+        },
+        {
+          "path": "sumData.thirdUserNum",
+          "field": "thirdUserNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        }
+      ],
+      "recentNotes": [
+        {
+          "path": "$",
+          "field": "",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "recentNotes 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes",
+          "field": "notes",
+          "dataTypes": [
+            "array"
+          ],
+          "nullable": false,
+          "maxArrayLength": 16,
+          "unit": "platform_native",
+          "description": "recentNotes 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[]",
+          "field": "notes",
+          "dataTypes": [
+            "object"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "recentNotes 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[].brandName",
+          "field": "brandName",
+          "dataTypes": [
+            "null"
+          ],
+          "nullable": true,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "recentNotes 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[].collectNum",
+          "field": "collectNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "笔记收藏量"
+        },
+        {
+          "path": "notes[].date",
+          "field": "date",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "date_or_time",
+          "description": "recentNotes 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "notes[].imgUrl",
+          "field": "imgUrl",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "URL",
+          "description": "笔记封面地址"
+        },
+        {
+          "path": "notes[].isAdvertise",
+          "field": "isAdvertise",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "是否为合作笔记"
+        },
+        {
+          "path": "notes[].isVideo",
+          "field": "isVideo",
+          "dataTypes": [
+            "boolean"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "是否为视频笔记"
+        },
+        {
+          "path": "notes[].likeNum",
+          "field": "likeNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "笔记点赞量"
+        },
+        {
+          "path": "notes[].noteId",
+          "field": "noteId",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "identifier",
+          "description": "笔记唯一标识"
+        },
+        {
+          "path": "notes[].readNum",
+          "field": "readNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "笔记阅读量"
+        },
+        {
+          "path": "notes[].thirdReadUserNum",
+          "field": "thirdReadUserNum",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "第三方阅读用户数"
+        },
+        {
+          "path": "notes[].title",
+          "field": "title",
+          "dataTypes": [
+            "string"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "笔记标题"
+        },
+        {
+          "path": "platformTotal",
+          "field": "platformTotal",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "platform_native",
+          "description": "recentNotes 数据域的蒲公英原始字段"
+        },
+        {
+          "path": "requestedCount",
+          "field": "requestedCount",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        },
+        {
+          "path": "returnedCount",
+          "field": "returnedCount",
+          "dataTypes": [
+            "number"
+          ],
+          "nullable": false,
+          "maxArrayLength": null,
+          "unit": "count",
+          "description": "蒲公英原始数量字段"
+        }
+      ]
+    }
+  }
+}

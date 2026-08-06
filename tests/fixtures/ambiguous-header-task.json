@@ -1,0 +1,18 @@
+{
+  "columns": [
+    {
+      "column": "M",
+      "label": "曝光中位数（90天）",
+      "resolved": {
+        "metric": "exposure",
+        "statistic": "median",
+        "window": "90d"
+      },
+      "missingDimensions": [
+        "scene",
+        "contentType",
+        "traffic"
+      ]
+    }
+  ]
+}

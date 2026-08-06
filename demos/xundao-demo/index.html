@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>找达人工作台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="工具导航">
+        <div class="brand">
+          <div class="brand-mark">XD</div>
+          <div>
+            <h1>寻到达人</h1>
+            <p>蒲公英达人与表现采集</p>
+          </div>
+        </div>
+
+        <nav class="side-nav">
+          <button class="nav-item is-active" data-screen="finder">
+            <span>找达人</span>
+            <em>独立</em>
+          </button>
+          <button class="nav-item" data-screen="collector">
+            <span>表现采集</span>
+            <em>独立</em>
+          </button>
+          <button class="nav-item" data-screen="records">
+            <span>任务记录</span>
+            <em>Demo</em>
+          </button>
+          <button class="nav-item" data-screen="settings">
+            <span>设置</span>
+            <em>Demo</em>
+          </button>
+        </nav>
+
+        <section class="side-card" aria-label="运行状态">
+          <h2>运行状态</h2>
+          <div class="status-row">
+            <span><i class="dot ok"></i>蒲公英登录态</span>
+            <strong>有效</strong>
+          </div>
+          <div class="status-row">
+            <span><i class="dot warn"></i>找达人结果</span>
+            <strong id="sidebarResultCount">5</strong>
+          </div>
+          <div class="status-row">
+            <span><i class="dot idle"></i>采集队列</span>
+            <strong id="sidebarQueueCount">0</strong>
+          </div>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="top-tabs" role="tablist" aria-label="主工具切换">
+            <button class="top-tab is-active" data-screen="finder" role="tab">找达人</button>
+            <button class="top-tab" data-screen="collector" role="tab">表现采集</button>
+          </div>
+          <div class="top-actions">
+            <span class="env-badge"><i></i>Local Static Demo</span>
+            <button class="light-action" id="resetDemo">重置演示</button>
+          </div>
+        </header>
+
+        <section class="screen is-active" id="finder">
+          <div class="page-title">
+            <h2>找达人工作台</h2>
+            <p>从蒲公英博主广场检索候选达人，确认后再推送到独立的表现采集工具。</p>
+          </div>
+
+          <div class="finder-grid">
+            <div class="finder-main">
+              <section class="panel filter-panel">
+                <div class="panel-head">
+                  <h3>检索条件</h3>
+                  <span id="querySummary">网球 · 1-10万粉丝 · 运动健身 · 智能排序</span>
+                </div>
+                <form class="filter-form" id="filterForm">
+                  <label>
+                    <span>关键词</span>
+                    <input id="keywordInput" name="keyword" value="网球" />
+                  </label>
+                  <label>
+                    <span>粉丝范围</span>
+                    <select id="fanRangeSelect" name="fanRange">
+                      <option>1-10万</option>
+                      <option>1-5万</option>
+                      <option>5-10万</option>
+                      <option>10-50万</option>
+                      <option>50万+</option>
+                      <option>全部</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>博主类目</span>
+                    <select id="categorySelect" name="category"></select>
+                  </label>
+                  <label>
+                    <span>细分类目</span>
+                    <select id="subcategorySelect" name="subcategory"></select>
+                  </label>
+                  <label>
+                    <span>命中笔记</span>
+                    <select id="matchSelect" name="match">
+                      <option>至少 2 篇</option>
+                      <option>至少 5 篇</option>
+                      <option>至少 10 篇</option>
+                      <option>不限</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>排序</span>
+                    <select id="sortSelect" name="sort">
+                      <option>综合匹配</option>
+                      <option>粉丝数从高到低</option>
+                      <option>报价从低到高</option>
+                      <option>阅读中位数优先</option>
+                      <option>互动中位数优先</option>
+                    </select>
+                  </label>
+                  <button class="primary-action" type="submit">运行检索</button>
+                </form>
+              </section>
+
+              <section class="panel result-panel">
+                <div class="result-toolbar">
+                  <div class="selection-state">
+                    已选 <strong id="selectedCountInline">0</strong> 人
+                  </div>
+                  <div class="result-actions">
+                    <button class="text-action" id="selectAllRows">全选</button>
+                    <button class="secondary-action" id="addToCollector" disabled>
+                      加入表现采集
+                    </button>
+                  </div>
+                </div>
+                <div class="table-wrap">
+                  <table class="candidate-table">
+                    <thead>
+                      <tr>
+                        <th class="select-col">
+                          <input type="checkbox" id="toggleAll" aria-label="全选达人" />
+                        </th>
+                        <th>达人</th>
+                        <th>小红书号</th>
+                        <th class="number-col">粉丝数</th>
+                        <th>相关依据</th>
+                        <th class="number-col">报价</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody id="candidateRows"></tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+
+            <aside class="finder-rail">
+              <section class="panel candidate-pool">
+                <div class="rail-head">
+                  <h3>候选池</h3>
+                  <button class="text-action" id="clearSelection">清空</button>
+                </div>
+                <div class="stat-row">
+                  <div class="stat-card">
+                    <strong id="poolReadyCount">0</strong>
+                    <span>可采集达人</span>
+                  </div>
+                  <div class="stat-card">
+                    <strong id="poolAverageFans">0</strong>
+                    <span>平均粉丝数</span>
+                  </div>
+                </div>
+                <div class="pool-list" id="poolList">
+                  <div class="empty-state">暂无候选达人，请从左侧表格选择</div>
+                </div>
+              </section>
+
+              <section class="panel flow-panel">
+                <h3>采集流程</h3>
+                <ol class="stepper">
+                  <li class="done">
+                    <span>候选入池</span>
+                    <em>已完成</em>
+                  </li>
+                  <li id="confirmStep">
+                    <span>人工确认</span>
+                    <em>待确认</em>
+                  </li>
+                  <li id="pushStep">
+                    <span>推送采集</span>
+                    <em>未推送</em>
+                  </li>
+                </ol>
+              </section>
+
+              <button class="rail-primary" id="pushToCollector" disabled>推送采集</button>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen" id="collector">
+          <div class="page-title">
+            <h2>表现采集工作台</h2>
+            <p>这是独立工具入口，可单独上传 Excel 运行，也可接收找达人推送的候选池。</p>
+          </div>
+          <div class="collector-grid">
+            <section class="panel collector-card">
+              <div class="panel-head">
+                <h3>表现采集工具</h3>
+                <span>独立运行入口</span>
+              </div>
+              <div class="upload-zone">
+                <strong>上传含蒲公英链接的 Excel</strong>
+                <p>或从找达人候选池导入</p>
+              </div>
+              <div class="collector-actions">
+                <button class="secondary-action">打开登录窗口</button>
+                <button class="secondary-action" id="importFromFinder">导入候选池</button>
+              </div>
+              <button class="primary-action full" id="startCollect">开始采集表现数据</button>
+              <details class="field-list" open>
+                <summary>采集字段</summary>
+                <div>
+                  <span>粉丝数</span>
+                  <span>阅读中位数</span>
+                  <span>互动中位数</span>
+                  <span>完播率</span>
+                  <span>报价</span>
+                  <span>粉丝画像</span>
+                </div>
+              </details>
+            </section>
+
+            <section class="panel task-panel">
+              <div class="panel-head">
+                <h3>采集任务</h3>
+                <span id="collectorTaskMeta">等待导入</span>
+              </div>
+              <div class="task-list" id="taskList"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen" id="records">
+          <div class="page-title">
+            <h2>任务记录</h2>
+            <p>后续用于保存每次检索、推送和采集导出的历史记录。</p>
+          </div>
+          <section class="panel">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>任务</th>
+                    <th>来源</th>
+                    <th>达人数量</th>
+                    <th>状态</th>
+                    <th>导出</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>网球 1-10万粉丝 KOL</td>
+                    <td>找达人</td>
+                    <td>5</td>
+                    <td><span class="status-pill ready">可采集</span></td>
+                    <td>候选表</td>
+                  </tr>
+                  <tr>
+                    <td>0707 达人表现回填</td>
+                    <td>表现采集</td>
+                    <td>4</td>
+                    <td><span class="status-pill muted">已导出</span></td>
+                    <td>Excel</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="screen" id="settings">
+          <div class="page-title">
+            <h2>设置</h2>
+            <p>后续把登录态目录、采集频率和证据保存策略做成可配置项。</p>
+          </div>
+          <section class="panel settings-panel">
+            <label>
+              <span>Chrome 登录态目录</span>
+              <input value=".pgy-browser-profile" />
+            </label>
+            <label>
+              <span>请求频率</span>
+              <select>
+                <option>人工可接受</option>
+                <option>更慢</option>
+              </select>
+            </label>
+            <label>
+              <span>证据保存</span>
+              <select>
+                <option>文本 + 截图 + JSON</option>
+                <option>文本 + JSON</option>
+              </select>
+            </label>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
