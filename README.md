@@ -7,13 +7,13 @@
 每位同事都可以从私有 GitHub 仓库克隆代码，把自己的电脑作为本地服务器。首次安装：
 
 ```bash
-git clone git@github.com:sanlee-cyble/xundao.git
+git clone https://github.com/sanlee-cyble/xundao.git
 cd xundao
 npm run setup:local
 npm run web:local
 ```
 
-随后打开 `http://127.0.0.1:8731`，创建本机管理员，并在「个人中心」独立完成蒲公英登录授权。完整步骤、更新方式和 Docker 方案见 [寻达本地团队交付指南](docs/local-team-setup.md)。仓库不包含任何现有 Cookie、浏览器资料、寻达数据库、真实任务文件或模型密钥。
+同事需先被添加为私有仓库协作者，并在 GitHub CLI、GitHub Desktop 或 Git 凭据管理器中登录有权账号。随后打开 `http://127.0.0.1:8731`，创建本机管理员，并在「个人中心」独立完成蒲公英登录授权。完整步骤、更新方式和 Docker 方案见 [寻达本地团队交付指南](docs/local-team-setup.md)。仓库不包含任何现有 Cookie、浏览器资料、寻达数据库、真实任务文件或模型密钥。
 
 ## 产品与开发规划
 

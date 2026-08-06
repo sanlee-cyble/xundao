@@ -12,12 +12,12 @@
 - Google Chrome；
 - 有权使用的蒲公英账号。
 
-首次安装依赖需要访问 npm 和 Python 软件源。寻达使用 Node 内置 SQLite，本地运行无需另装数据库。
+仓库当前为私有仓库，管理员需先在 GitHub 仓库的 `Settings → Collaborators` 中邀请同事；同事接受邀请后，通过 GitHub CLI、GitHub Desktop 或 Git 凭据管理器登录有权账号。首次安装依赖需要访问 npm 和 Python 软件源。寻达使用 Node 内置 SQLite，本地运行无需另装数据库。
 
 ## 二、克隆与安装
 
 ```bash
-git clone git@github.com:sanlee-cyble/xundao.git
+git clone https://github.com/sanlee-cyble/xundao.git
 cd xundao
 npm run setup:local
 ```
